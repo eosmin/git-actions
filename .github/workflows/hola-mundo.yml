@@ -1,0 +1,13 @@
+name: hola-mundo
+on: [push]
+jobs:
+  hola-mundo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 24
+      - name: Run index
+        run: node index.js
+
